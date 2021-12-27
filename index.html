@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+
+<head>
+
+<link rel="stylesheet" type="text/css" href="content\styles\generalstyles.css">
+
+<title>Scott family</title>
+
+<script language="JavaScript">
+
+function popup(FILE, FEATURES) { 
+    CONTENT = "<HTML><HEAD><TITLE>Enlarged image</TITLE></HEAD>" +
+              "<BODY><CENTER><FORM><INPUT TYPE='BUTTON' VALUE='Close'" +
+               "onClick='window.close()'></FORM><P><IMG SRC='" + FILE + 
+               "' BORDER=0>" + "</CENTER>"+ "</BODY></HTML>";
+              pop = window.open("","",FEATURES);
+              pop.document.open();
+              pop.focus();
+              pop.document.write(CONTENT);
+              pop.document.close();
+
+} 
+
+
+function view (imagefile) { 
+   var winShell
+   var atext, btext, ctext;
+   var fso;
+   var quoteS = String.fromCharCode(34);
+
+   atext=self.location.href; // the current page path
+   fso  = new ActiveXObject("Scripting.FileSystemObject"); 
+   btext = fso.GetParentFolderName(atext); // path without the page name
+   delete(fso);
+
+   atext = quoteS + "\\" + btext + exefile  + quoteS; // add the image relative path and put in quotes
+   atext = atext.replace( /\//g, '\\' ); // make sure the slashes are the right way round
+   ctext = "btext = " + btext + " atext = " + atext;
+   // alert(ctext);
+
+   atext = "rundll32.exe %SystemRoot%\system32\shimgvw.dll,ImageView_Fullscreen";
+   // add the image path
+   atext = atext + "\\" + imagefile;
+   alert(text);
+
+   // Run the given executable
+   winShell = new ActiveXObject("WScript.Shell");
+   // winShell.Run(atext);
+   delete(winShell);
+}
+
+</script>
+
+</head>
+
+<title>Scott family</title>
+
+<body>
+
+<H1><CENTER>Scott family</CENTER></H1>
+<H3>The Scott family in Adelaide, South Australia</H3>
+<br>
+
+<p style="background: Gainsboro; border: 1px solid #0066FF; padding:8px">
+The Scott family is linked to Jarvis family through Alice May Scott who married Eric Roy Jarvis of Adelaide, South Australia. Alice is grandmother to the author and many memories are of Uncles and Aunts from the Scott family.
+<br><br>
+Lynn Jarvis<br>
+December 2021
+</p>
+<br>
+
+<h3>The Scott family tree</h3>
+
+<p style="background: palegoldenrod; border: 1px solid #0066FF; padding:8px">
+<br>
+<a href="content\scott-tree.html"><b>The interactive family tree</b></a>
+<br><br>
+Information has been recoved from the work of <a href="https://jarvis-genealogy.github.io/Quintrell-Family/">Neil Quintrell</a> and from <a href="https://www.familysearch.org/search/family-trees">FamilySearch</a>.
+<br><br>
+Where you see blue squares at the left margin, move the cursor over them to bring up thumbnail images. Click on the square to bring up the particular image or document. Click the "Back" button at the top of the browser to return to the chart.
+<br><br>
+</p>
+
+<br>
+<h3>The Desmond family</h3>
+
+<p style="background: palegoldenrod; border: 1px solid #0066FF; padding:8px">
+<br>
+Alice&apos;s brother, Arnold, married Violet Moon and they had three daughters, Norma, Joyce and Rhonda. Norma Scott married Ray Desmond leading to the Desmond family, as shown in the Scott family tree. Three image albums have been created from photos provided by Greg Desmond, grandson of Arnold Scott.
+<br><br>
+</p>
+
+<br>
+
+<!-- Heading to link to -->
+<h3 id="Image_galleries">Photos</h3>
+
+<p style="background: palegoldenrod; border: 1px solid #0066FF; padding:8px">
+<br>
+<a href="https://jarvis-genealogy.github.io/Jarvis-Family/content/scott-tree/images/arnold-scott-photography/arnold-scott-photography.html"><b>Arnold Scott photography</b></a>
+<br><br>
+<a href="https://jarvis-genealogy.github.io/Jarvis-Family/content/scott-tree/images/desmond-family/desmond-album.html"><b>Desmond family</b></a>
+<br><br>
+<a href="https://jarvis-genealogy.github.io/Jarvis-Family/content/scott-tree/images/norma-desmond-album/desmond-family-album.html"><b>Family photo album</b></a>
+<br><br>
+</p>
+
+<br><br><br><br>
+
+</body>
+
+</html>
